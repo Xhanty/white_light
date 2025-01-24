@@ -123,7 +123,7 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #E3C7A8;
+    background-color: rgb(204 204 204 / 90%);
     padding: 32px 70px;
     border-radius: 32px;
 }
@@ -429,11 +429,23 @@ header .btn:after {
     position: relative;
     padding-top: 187px;
     overflow: hidden;
+    background-image: url(./../img/banner.jpeg);
     background-color: var(--bgcolor);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
+    background-size: cover;
     padding-bottom: 70px;
-} 
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 82, 172, 0.5); /* Adjust the opacity as needed */
+}
 .hero-text {
     position: relative;
     margin-top: 40px;
@@ -554,7 +566,24 @@ form#contact-form h3 {
     border: 1px solid #cdcdcd;
     border-radius: 18px;
     padding-left: 20px;
+    resize: none;
 }
+
+.get-a-quote textarea {
+    width: 100%;
+    height: 100px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 16px;
+    background-color: #fafafa;
+    border: 1px solid #cdcdcd;
+    border-radius: 18px;
+    padding-left: 20px;
+    resize: none;
+}
+
 .get-a-quote input:focus {
     border-color: var(--bgcolor);
 }
@@ -886,7 +915,7 @@ footer {
     outline: 8px solid var(--bgcolor);
     position: relative;
     z-index: 111;
-    color: #E3C7A8;
+    color: rgb(204 204 204 / 90%);
 } 
 .presenting:hover i:before {
     z-index: 11;
@@ -901,7 +930,7 @@ footer {
     border: 1px solid #fff;
 }
 .presenting:hover i:after {
-    border: 70px solid #E3C7A8;
+    border: 70px solid rgb(204 204 204 / 90%);
 }
 .presenting h3 {
     font-weight: bold;
@@ -1320,7 +1349,7 @@ ul.icon-share {
 }
 .accordion-item.active .title {
     color: #000;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 0;
     padding-bottom: 0;
 }
@@ -1353,7 +1382,7 @@ ul.icon-share {
     padding-right: 0;
     color: black;
     font-size: 24px;
-    background-color: #fff;
+    background-color: transparent;
     padding-left: 0;
     font-weight: 700;
     border-bottom: 1px solid #d1d1d1;
@@ -1363,7 +1392,7 @@ ul.icon-share {
     padding-bottom: 15px;
 }
 .accordion-item.active {
-    background-color: #fff;
+    background-color: transparent;
     border: 0;
     border-bottom: 1px solid var(--bgcolor);
     border-radius: 0;
@@ -1736,7 +1765,7 @@ ul.social-media {
     gap: 25px;
 }
 ul.social-media a:hover i {
-    color: var(--bgcolor);
+    /* color: var(--bgcolor); */
 }
 /* 21. widget-title */
 .widget-title h3 {
@@ -2073,4 +2102,10 @@ footer ul.shaps-img li:nth-child(3) {
 
 .c-white {
     color: white !important;
+}
+
+@media screen and (min-width: 992px) {
+    .accordion-img {
+        margin-top: 12rem;
+    }   
 }
